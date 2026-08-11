@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 bool isHappy(int n)
 {
     int i, r, sum;
@@ -23,7 +24,7 @@ bool isHappy(int n)
         return sum == 1;
     }
 }
-void main()
+int main()
 {
     int num;
     printf("ENTER A NUMBER :");
@@ -36,4 +37,5 @@ void main()
     {
         printf("\n ENTERED NUMBER IS NOT HAPPY NUMBER");
     }
+    return 0;
 }
