@@ -1,28 +1,18 @@
 #include <stdio.h>
-double clacPower(double x, int n) {
-  double po = 1.0;
-    if (n == 0)
-    {
-        return 1;
+double clacPower(double x, long long n) {
+  double po=1;
+  if(n<0){
+    x=1/x;
+    n=-n;
+  }
+  while(n>0){
+    if(n%2==1){
+        po=po*x;
     }
-    if (n > 0)
-    {
-        while(n>0)
-        {
-            po=po*x;
-            n--;
-        }
-    }
-    if (n < 0)
-    {
-        while(n<0)
-        {
-            po=po*x;
-            n++;
-        }
-        po = 1 / po;
-    }
-    return po;
+    x=x*x;
+    n=n/2;
+  }
+  return po;
 }
 void main()
 {
