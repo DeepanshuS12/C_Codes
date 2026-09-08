@@ -10,9 +10,14 @@ int main() {
         c++;
         temp=temp/10;
     }
-    for(i=num;i>0;i=i/10){
-        digit=i%10;
-        sum=sum+(int)(pow(digit,c));
+    for (i = num; i > 0; i = i / 10)
+    {
+        digit = i % 10;
+        int p=1;
+        for(int j=0;j<c;j++){
+            p=p*digit;
+        }
+        sum=sum+p;
     }
     if(sum==num)
     printf("ARMSTRONG NUMBER");
